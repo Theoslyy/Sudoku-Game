@@ -19,9 +19,9 @@ class SelecionarNumero:
             if self.hover_botao(pos):
                  pygame.draw.rect(tela, self.cor_selecionado, [pos[0], pos[1], self.botao_larg, self.botao_alt], 
                                 width=3, border_radius=10)
-                 texto_numeros = self.botao_fonte.render(str(index), False, (0, 255, 0))
+                 texto_numeros = self.botao_fonte.render(index == 0 and "x" or str(index), False, (0, 255, 0))
             else:
-                 texto_numeros = self.botao_fonte.render(str(index), False, self.cor_basico)
+                 texto_numeros = self.botao_fonte.render(index == 0 and "x" or str(index), False, self.cor_basico)
 
             if self.numero_selecionado > 0: 
                 if self.numero_selecionado == index:
@@ -30,7 +30,7 @@ class SelecionarNumero:
                     texto_numeros = self.botao_fonte.render(str(index), False, self.cor_selecionado)
                     
 
-            tela.blit(texto_numeros, (pos[0] + 13, pos[1]))
+            tela.blit(texto_numeros, (pos[0] + 12, pos[1]))
 
     def click_botao(self, mouse_x: int, mouse_y: int) -> None:
         for index, pos in enumerate(self.botao_posicoes):
