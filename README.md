@@ -33,7 +33,7 @@ A função `shuffle` só retorna uma versão embaralhada de uma lista qualquer
 A variável `rBase` é um range `[0, 1, 2]`
 
 A variável `nums` é uma lista com os números de 1 a 9 `[1, 2, 3, 4, 5, 6, 7, 8, 9]`\
-...só que embaralhado!\
+...só que embaralhada!\
 A importância dela ser embaralhada é explicada mais tarde, junto com a função `pattern`
 
 
