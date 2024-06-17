@@ -24,7 +24,7 @@ def pattern(r,c): return (base*(r%base)+r//base+c)%side
 board = [ [nums[pattern(r,c)] for c in cols] for r in rows ]
 ```
 
-Ele começa definindo a base e o tamanho do lado do tabuleiro.
+Ele começa definindo a base e o tamanho do lado do tabuleiro.\
 **(A gente vai assumir base 3 e lado 9, e pra todo propósito prático, a gente pode entender um `range` como uma lista.)**
 
 
@@ -32,9 +32,9 @@ A função `shuffle` só retorna uma versão embaralhada de uma lista qualquer
 
 A variável `rBase` é um range `[0, 1, 2]`
 
-A variável `nums` é um range com os números de 1 a 9 `[1, 2, 3, 4, 5, 6, 7, 8, 9]`
-...só que embaralhado!
-a importância dele ser embaralhado é explicada mais tarde, junto com a função `pattern`
+A variável `nums` é uma lista com os números de 1 a 9 `[1, 2, 3, 4, 5, 6, 7, 8, 9]`\
+...só que embaralhado!\
+A importância dela ser embaralhada é explicada mais tarde, junto com a função `pattern`
 
 
 
@@ -59,13 +59,13 @@ for g in S1:
 		rows.append(g*base + r)
 ```
 
-Vamos analisar o caso base onde `S1`  e `S2` são a lista `[0, 1, 2]`:
-`S1 = [0, 1, 2]`
+Vamos analisar o caso base onde `S1`  e `S2` são a lista `[0, 1, 2]`:\
+`S1 = [0, 1, 2]`\
 `S2 = [0, 1, 2]`
 
-Pegamos o primeiro elemento `g` de `S1` e multiplicamos por **3** (a base)
+Pegamos o primeiro elemento `g` de `S1` e multiplicamos por **3** (a base)\
 (aqui vamos chamar esse produto de `x`)\
-Pra cada elemento `r` de `S2` adicionamos na lista `rows` a soma de `x + r`
+Pra cada elemento `r` de `S2` adicionamos na lista `rows` a soma de `x + r`:
 ```python
 x = 0              # g=0,        0*3 = <0>
 rows.append( 0 )   # x=0, r=0,   0+0 = <0>
@@ -104,14 +104,14 @@ board = [ [nums[pattern(r,c)] for c in cols] for r in rows ]
 
 À primeira vista, o que se pode inferir é que, é gerado uma lista contendo cada linha do tabuleiro, onde cada número dessa linha é obtido por uma função `pattern`, que retornará o índice de um número `x` (da lista `nums`) para cada elemento `r` e `c` das listas `rows` e `cols`
 
-...complicado!
+...complicado!\
 Para simplificar as coisas, vamos primeiro assumir `nums` como simplesmente a lista não-embaralhada `[0, 1, 2, 3, 4, 5, 6, 7, 8]`
 
-Também vamos substituir `base` por `3`, e `side` por `9`
+Também vamos substituir `base` por `3`, e `side` por `9`:\
 `( 3*(r%3) + r//3 + c ) % 9`
 
-Vamos dissecar a função `pattern`.
-essa função vem em 3 partes:
+Vamos dissecar a função `pattern`.\
+Essa função vem em 3 partes:
 1. `3 * (r%3)` (3 vezes o módulo da divisão de r por 3)
 2. `r//3` (divisão inteira de r por 3)
 3. `(<1> + <2> + c) % 9` (soma da pt,1 com a pt.2, com c, módulo 9.)
