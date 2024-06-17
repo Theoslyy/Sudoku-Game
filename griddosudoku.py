@@ -167,7 +167,13 @@ class Tabuleiro:
                         return False
         self.vence = True
         
+    def restart(self) -> None:
+        self.tabuleiro = self.criar_tabu(SUB_TABU_TAM)
+        self.remove_numeros(self.tabuleiro)
+        self.coordenadas_celulas_ocupadas = self.celulas_nao_vazio()
+        self.vence = False
         
+                
     def mostra(self):
         #mostra o tabuleiro
         for celulas in self.tabuleiro:

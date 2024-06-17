@@ -30,7 +30,10 @@ while running:
                 posicao = pygame.mouse.get_pos()
                 tabuleiro.get_mouse_click(posicao[0], posicao[1])
                 tabuleiro.checa_vitoria
-                
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE and tabuleiro.vence:
+                tabuleiro.restart() 
+        
     #colore
     tela.fill(cor_de_fundo)
 
