@@ -1,3 +1,8 @@
+This is a Sudoku game project on Python utilizing pygame. It contains an additional Sudoku solver inside. 
+The game contains a function that randomly generates a board for each new game. 
+The code is mostly commented and below we have an explanation of the part of the code that generates random boards.
+Explanation by Gu-Ramos
+
 # Algoritmo de geração do tabuleiro
 ```python
 base = 3
