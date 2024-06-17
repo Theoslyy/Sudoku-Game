@@ -1,3 +1,4 @@
+#Board class, has almost all the important features for the game
 from random import sample
 import pygame
 from escolhernums import SelecionarNumero

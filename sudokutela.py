@@ -1,3 +1,4 @@
+#main game function
 import pygame
 import os
 from griddosudoku import Tabuleiro

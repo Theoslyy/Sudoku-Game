@@ -1,3 +1,4 @@
+#Not used in the game
 #Tamanho do tabuleiro é 9x9 logo, salvamos esse tamanho
 tamanho = 9
 def desenha(a):
