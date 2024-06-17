@@ -1,1 +1,2 @@
-
+Sudoku game project on Python using pygame, has an additional Sudoku solver inside and a random board generator.
+The code is commented and the project contains a readme explaining some of the more unique features (TODO)
