@@ -1,3 +1,5 @@
+Explanation by Gu-Ramos
+
 # Algoritmo de geração do tabuleiro
 ```python
 base = 3
